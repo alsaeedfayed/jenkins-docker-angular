@@ -24,7 +24,7 @@ pipeline {
                 // Stop previous container if it exists
                 sh '''
                 docker rm -f ${APP_NAME} || true
-                docker run -d --name ${APP_NAME} -p 8081:80 ${APP_NAME}
+                docker run -d --name ${APP_NAME} -p 8086:80 ${APP_NAME}
                 '''
             }
         }
